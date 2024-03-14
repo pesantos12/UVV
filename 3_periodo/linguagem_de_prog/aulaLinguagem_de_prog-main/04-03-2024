@@ -1,0 +1,21 @@
+<algorithm> ::= "ALGORITMO " "\"" <name_convention> "\";\nVARIAVEIS\n" <var_declaration_section> "INICIO\n" <instructions_section> "FIM_ALGORITMO"
+
+<name_convention> ::= (<char>)+ 
+					 (<char> | "_" | <int_number>)*
+
+<var_declaration_section> ::= "\n" | <var_declaration>+
+
+<var_declaration> ::= "\t" <name_convention> (", " <name_convention>)* " : " <var_type> "\n"
+
+<instructions_section> ::= "\n" | <instruct>+
+<instruct> ::= "\t" ( <escreva> | "LEIA(" <name_convention> ");" |  <conta>) "\n"
+<conta> ::= <name_convention> " <-- " <n_or_char> " "* (<operation> " "* <n_or_char>)* ";"
+<n_or_char> ::= <name_convention> | [0-9]+ | "\"" <name_convention> "\"" | "\"" [0-9]+ "\""
+<text> ::= <char>+ | "\"" <char> ( " " | <char> | ":")* "\""
+<escreva> ::= "ESCREVA(" <text> ("," " "* <text>)* ");"
+<operation> ::= "+" | "-" | "/" | "*"
+<var_type> ::= "Inteiro" | "Real" | "Texto" | "Logico"
+<int_number> ::= [0-9]
+<char> ::= <lowercase_char> | <uppercase_char>
+<lowercase_char> ::= [a-z]
+<uppercase_char> ::= [A-Z]
