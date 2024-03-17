@@ -1,0 +1,16 @@
+Atributo = onde vão os dados das entidades (são representados por ovários)
+- sublinhado = PK
+- ramificado = composto
+- duplo ovário = multivalorado
+- pontilhado = opcional
+
+relacionamento = relação entre entidades (representados por um losango)
+
+Uma entidade pode virar uma ou muitas tabelas quando for para o modelo lógico
+
+Relacionamentos que viram entidades (N:N) são representados por um losango dentro de um retângulo,
+sendo chamada de entidade associativa
+
+O BRMODELO é responsável por fazer uma modelagem conceitual
+
+(projetos no portal para implementar no modelo conceitual)
