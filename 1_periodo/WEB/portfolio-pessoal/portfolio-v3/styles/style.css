@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --cor-1: #F1F6F9;
+    --cor-2: #394867;
+    --cor-3: #212A3E;
+    --cor-4: #9BA4B5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+header {
+    background-color: var(--cor-1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 2px;
+    margin-left: 4.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: var(--cor-2);
+}
+
+a:hover {
+    color: var(--cor-4);
+}
+
+.logo {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.icon {
+    display: none;
+    cursor: pointer;
+    color: var(--cor-2);
+}
+
+.part1 {
+    display: flex;
+    align-items: center;
+    padding: 8vh 35vw;
+    gap: 30px;
+    background-color: var(--cor-1);
+}
+
+.text-part1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;  
+    letter-spacing: 2px;  
+}
+
+.img-part1 {
+    width: 240px;
+}
+
+.part2 {
+    background-color: var(--cor-2);
+    color: var(--cor-1);
+    height: 700px;
+}
+
+.part2 .title-part2 p {
+    text-align: center;
+    padding: 3rem 0 100px;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.part2-cont {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 30%;
+    padding-right: 40px;
+}
+
+.part2-text {
+    width: 300px;
+    padding-right: 500px;
+}
+
+.img-div-part2 img {
+    width: 300px;
+}
+
+footer {
+    background-color: var(--cor-1);
+    color: var(--cor-1);
+}
+
+@media (max-width: 999px) {
+    .nav-list {
+        position: absolute;
+        top: 9vh;
+        right: 0;
+        width: 40vw;
+        height: 92vh;
+        background-color: var(--cor-1);
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-around;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+    }
+
+    .icon {
+        display: block;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .nav-list {
+        width: 100vw;
+    }
+}

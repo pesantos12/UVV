@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root {
+    --cor-primaria: black;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22d4fd;
+    --cor-hover: #272727;
+
+    --fonte-titulo: 'krona One', sans-serif;
+    --fonte-texto: 'montserrat', sans-serif;
+}
+
+body {
+
+    box-sizing: border-box;
+    /*O border-box significa que o elemento vai ocupar todo o espaço disponível, sem precisar 
+    dizer um tamanho em específico, usar ele no body significa que o body vai usar 
+    a página toda */
+
+    background-color: var(--cor-primaria);
+    /*Cor do fundo da tela */
+
+    color: var(--cor-secundaria);
+    /*Cor base de todas as fontes*/
+}
+
+*
+
+/*Seletor universal */
+    {
+    margin: 0;
+    /*Margen base de todos os elementos vai ser 0 */
+
+    padding: 0;
+    /*Padding (distância entre o elemento e a borda) base vai ser 0*/
+}
+
+
+.main {
+    display: flex;
+    /*Layouts flexivos e responsivos */
+    align-items: flex-start;
+    /*Centraliza todos os elementos filhos tanto verticalmente como horizontalmente (só funciona em conjusto do display: flex).
+     o FLEX-START significa que todos os elementos filhos irão começar no início/topo*/
+    justify-content: space-between;
+    /*Divide uniformemente os espaços disponíveis entre os filhos deste pai, horizontalmente*/
+    padding: 5% 17% 7%;
+}
+
+header {
+    padding: 2.5% 67% 0 17%;
+}
+
+.navegacao {
+    display: flex;
+    gap: 55px;
+}
+
+.nav_link {
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.conteudo {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    /*Flex-direction é a direção que os itens serão colocados, column significa que eles vão ser colocados em coluna de cima para baixo*/
+    gap: 28px;
+    /*Espaçamento entre os itens do contêiner flex*/
+}
+
+.titulo_conteudo {
+    font-size: 24px;
+    /*Tamanho da fonte*/
+    font-family: var(--fonte-titulo);
+    /*Fonte, primeiro vem o nome da fonte e depois o sans-serif (padrão sempre usado)*/
+}
+
+span
+
+/*Usado para estilizar partes específicas de um texto */
+    {
+    color: var(--cor-terciaria);
+}
+
+.texto_conteudo {
+    font-size: 16px;
+    font-family: var(--fonte-texto);
+}
+
+.links_titulo {
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+    /*Peso da fonte*/
+    font-size: 16px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*center significa que todos os itens ficaram no centro (tanto verticalmente como horizontalmente) */
+    gap: 24px;
+}
+
+.botao {
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    /*alinhar os filhos, imagem e texto*/
+    gap: 8px;
+    text-align: center;
+    border: 1px solid var(--cor-terciaria);
+    /*Primeiro é a grossura da borda, depois qual tipo de borda (no caso é a padrão), 
+    depois a cor da borda*/
+    border-radius: 6px;
+    /*Curvatura da borda, quando menor mais quadrada ela é, quanto maior, mais circular*/
+    font-size: 17px;
+    padding: 18px 0;
+    /*espaço entre o conteudo HTML e a borda, o valor1 representa o tamanho do elemento ate a parte de cima 
+    e de baixo, o valo2 é o espaço dele até a esquerda e até a direita, o valo2 é 0 pois o elemento ja está 
+    centralizado, então não existe a necessidade de um espaçamento a mais*/
+    text-decoration: none;
+    /*Tira a decoração base dos links, como o sublinhado*/
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+}
+
+.botao:hover
+
+/*qualquer coisa :hover é usado para ter a animação sob passar o mouse em cima*/
+    {
+    background-color: var(--cor-hover);
+    /*quando passar o mouse no botao, ele ficara com essa cor de background*/
+}
+
+.logo_apps {
+    width: 20px;
+}
+
+.imagem_pedro {
+    width: 300px;
+}
+
+footer {
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+}

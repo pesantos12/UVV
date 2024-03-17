@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --cor-1: #F1F6F9;
+    --cor-2: #394867;
+    --cor-3: #212A3E;
+    --cor-4: #9BA4B5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+header {
+    background-color: var(--cor-1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 2px;
+    margin-left: 4.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: var(--cor-2);
+}
+
+a:hover {
+    color: var(--cor-4);
+}
+
+.logo {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.icon {
+    display: none;
+    cursor: pointer;
+    color: var(--cor-2);
+}
+
+main {
+    background-color: var(--cor-2);
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contatos {
+    color: var(--cor-1);
+}
+
+footer {
+    background-color: var(--cor-1);
+    color: var(--cor-1);
+}
+
+@media (max-width: 999px) {
+    .nav-list {
+        position: absolute;
+        top: 9vh;
+        right: 0;
+        width: 40vw;
+        height: 92vh;
+        background-color: var(--cor-1);
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-around;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+    }
+
+    .icon {
+        display: block;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .nav-list {
+        width: 100vw;
+    }
+}
