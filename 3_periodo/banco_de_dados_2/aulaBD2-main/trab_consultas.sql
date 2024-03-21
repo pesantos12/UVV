@@ -24,4 +24,13 @@ LEFT JOIN transaction t ON a.account_id = t.account_id
 GROUP BY emp_id
 ORDER BY nome, e.start_date;
 
--- 4. Junções Internas, Agrupamento, Agregação, União e Concatenação
+-- 4. Junções Internas, Agrupamento, Agregação, União e Concatenação incompleto
+CREATE OR REPLACE VIEW view_max_balance AS
+SELECT b.branch_id, MAX(a.avail_balance) valor_max
+FROM branch b, account a
+WHERE b.branch_id = a.open_branch_id
+GROUP BY b.branch_id;
+
+SELECT a.account_id, b.name, vmb.valor_max
+FROM view_max_balance vmb, account a, branch b
+WHERE vmb.valor_max = a.avail_balance AND vmb.branch_id = a.open_branch_id AND vmb.branch_id = b.branch_id;
