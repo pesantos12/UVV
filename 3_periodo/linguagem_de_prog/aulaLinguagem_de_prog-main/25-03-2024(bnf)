@@ -1,0 +1,4 @@
+/*Crie uma especificação em BNF para validar um campo de celular considerando o padrão nacional.Ex.: (27)99933-2233*/
+<telefone> ::= <DDD> <num>
+<DDD> ::= "(" [0-9] [0-9] ")"
+<num> ::= [0-9] [0-9] [0-9] [0-9] [0-9] "-" [0-9] [0-9] [0-9] [0-9] 
