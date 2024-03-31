@@ -1,0 +1,57 @@
+Gramática de expressões aritméticas: Defina uma gramática BNF para expressões aritméticas simples que incluam adição, subtração, multiplicação e divisão.
+
+<algoritmo> ::= <termo> ";"
+<termo> ::= <num> | <termo> " "+ <opAr> " "+ <termo> | "(" " "+ <termo> " "+ ")"
+<var> ::= ([a-z] | [A-Z]) ([a-z] | [A-Z] | [0-9])*
+<num> ::= [0-9]+
+<opAr> ::= "+" | "-" | "/" | "*"
+
+Gramática de expressões booleanas: Crie uma gramática BNF para expressões booleanas que incluam operadores como AND, OR e NOT.
+
+<algoritmo> ::= <exp>+
+
+<exp> ::= " "* <bool> " "* | <exp> " " <opLog> " " <exp> | "(" " "* <exp> " "* ")"
+<bool> ::= "True" | "False"
+<opLog> ::= "AND" | "OR" | "NOT" | "XOR"
+
+Declaração de variáveis em uma linguagem de programação simples: Escreva uma gramática BNF para declarar 
+variáveis em uma linguagem de programação simples. Considere variáveis com tipos, como int, float, string, etc.
+
+<algoritmo> ::= <equacao>
+
+<equacao> ::= <var> <opAtribuicao> <variaveis>
+<var> ::= ([a-z] | [A-Z]) ([a-z] | [A-Z] | [0-9])*
+<opAtribuicao> ::= " "* "=" " "*
+<variaveis> ::= <num> | <string> | <char>
+<num> ::= [0-9]+ ("." [0-9]+)?
+<string> ::= "\"" ([a-z] | [A-Z])+ "\""
+<char> ::= "'" ([a-z] | [A-Z]) "'"
+
+Declaração de funções: Defina uma gramática BNF para declarações de funções em uma linguagem de programação. Isso deve incluir a sintaxe para nome da função, lista de parâmetros e corpo da função.
+
+<algoritmo> ::= <fun>
+
+<fun> ::= "fun " <nome> <parametro> "\n\t" <corpo>
+<nome> ::= ([a-z] | [A-Z]) ([a-z] | [A-Z] | [0-9])*
+<parametro> ::= " "* "(" (<nome> ("," " "* <nome>)*)? "):"
+<corpo> ::= <operacoes> ";" ("\n\t" <operacoes> ";")*
+
+
+<operacoesSimples> ::= <termo> 
+<termo> ::= (<termo> | <num>) " "+ <opAr> " "+ (<termo> | <num>) | "(" " "+ (<termo> | <num>) " "+ ")"
+<var> ::= ([a-z] | [A-Z]) ([a-z] | [A-Z] | [0-9])*
+<opAr> ::= "+" | "-" | "/" | "*"
+
+<operacoes> ::= <equacao>
+<equacao> ::= <var> <opAtribuicao> (<variaveis> | <operacoesSimples>)
+<opAtribuicao> ::= " "* "=" " "*
+<variaveis> ::= <num> | <string> | <char>
+<num> ::= [0-9]+ ("." [0-9]+)?
+<string> ::= "\"" ([a-z] | [A-Z])+ "\""
+<char> ::= "'" ([a-z] | [A-Z]) "'"
+
+Declaração de estruturas de controle: Crie uma gramática BNF para estruturas de controle em uma linguagem de programação, como if-else, loops (for, while), switch-case, etc.
+
+Declaração de arrays: Escreva uma gramática BNF para declarar arrays em uma linguagem de programação, incluindo a sintaxe para inicialização e acesso aos elementos do array.
+
+Expressões regulares: Defina uma gramática BNF para expressões regulares simples, incluindo operadores como concatenação, repetição e alternância.
