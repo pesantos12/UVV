@@ -165,12 +165,9 @@ AH = 1.72,
 M = bia,
 AM = 1.71 ;
 
-?- candidatos(Nome, fem, Idade, Altura, Peso), Peso =< (62.1*Altura-44.7), Altura >= 1.70, Idade < 25.
-Nome = bia,
-Idade = 19,
-Altura = 1.71,
-Peso = 61.3 ;
-Nome = lia,
-Idade = 17,
-Altura = 1.85,
-Peso = 57.3 ;
+% predicado = regra
+Modelo(N) :-
+    candidatos(N, S, I, A, P),
+    I < 25, A >= 1.70, S = fem,
+    P =< (62.1*A-44.7).
+
