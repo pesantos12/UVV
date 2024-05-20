@@ -80,3 +80,60 @@ L = [d, i, j].
 
 ----------------------------------------------
 
+% 1)Crie um predicado fatorial(N, R) que calcule o fatorial do N na
+% variavel R.
+
+fatorial(0, 1).
+fatorial(1, 1).
+fatorial(X, R) :-
+    X>1,
+    T is X-1,
+    fatorial(T, RT),
+    R is X*RT.
+
+----------------------------------------------
+
+% 2)Crie um predicado para converter um numero inteiro decimal em
+% binario
+
+decbin(0, [0]).
+decbin(1, [1]).
+decbin(X, L) :-
+    X > 1,
+    A is X mod 2,
+    B is X div 2,
+    decbin(B, L1),
+    append(L1, [A], L).
+
+?- decbin(10, L).
+L = [1, 0, 1, 0] .
+
+------------------------------------------------
+
+% 3)Considere a seguinte base de fatos sobre rodovias, com as distancias
+% entre cidades.
+
+rodovia(a, b, 25).
+rodovia(a, d, 23).
+rodovia(b, e, 32).
+rodovia(b, c, 19).
+rodovia(c, d, 14).
+rodovia(c, f, 28).
+rodovia(d, f, 30).
+rodovia(e, f, 26).
+
+% Crie o predicado distancia (C1, C2, D), que determina a distancia
+% entre as cidades C1 e C2.
+
+dist(C1, C2, D) :-
+    rodovia(C1, C2, D).
+dist(C1, C2, D) :-
+    rodovia(C1, C3, D1),
+    dist(C3, C2, D2),
+    D is D1+D2.
+
+?- dist(a, f, D).
+D = 83 ;
+D = 72 ;
+D = 88 ;
+D = 53 ;
