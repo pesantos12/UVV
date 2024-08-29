@@ -1,0 +1,28 @@
+~$ usuário normal
+~# root
+
+pseudo terminal é um emulador de terminal
+
+ctrl + alt + t -> abrir pseudo terminal
+ctrl + d -> fechar terminal
+
+"Linux tudo é arquivo"
+
+tty = mostra o arquivo do terminal
+-- retorn: /dev/pts/1
+
+echo "Hello World" > /dev/pts/1 = printa na tela desse outro terminal
+
+find / = acessando todos os arquivos
+
+find / 1> /dev/pts/1 2> /dev/pts/3
+
+ctrl + alt + f3 = altera de terminal
+ctrl + alt + f1 = volta pra pagina inicial (encerra o terminal)
+
+BASH - bourne-again shell 
+escrita por brian fox em 1989 no projeto GNU licenciado GPL
+sexta linguagem mais famosa no mundo
+pode ler e executar comandos de um arquivo (script de shell)
+
+nano - editor de texto
