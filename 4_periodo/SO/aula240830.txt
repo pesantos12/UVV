@@ -1,0 +1,84 @@
+~$ usuário normal
+~# root
+
+pseudo terminal é um emulador de terminal
+
+ctrl + alt + t -> abrir pseudo terminal
+ctrl + d -> fechar terminal
+
+"Linux tudo é arquivo"
+
+tty = mostra o arquivo do terminal
+-- retorn: /dev/pts/1
+
+echo "Hello World" > /dev/pts/1 = printa na tela desse outro terminal
+
+find / = acessando todos os arquivos
+
+find / 1> /dev/pts/1 2> /dev/pts/3
+
+ctrl + alt + f3 = altera de terminal
+ctrl + alt + f1 = volta pra pagina inicial (encerra o terminal)
+
+BASH - bourne-again shell 
+escrita por brian fox em 1989 no projeto GNU licenciado GPL
+sexta linguagem mais famosa no mundo
+pode ler e executar comandos de um arquivo (script de shell)
+
+nano - editor de texto
+
+
+30/08/24
+
+zsh para abrir o terminal
+
+ctrl + L = clear
+ctrl + U = limpar a linha pra esquerda
+ctrl + K = limpar para direita
+ctrl + a = vai pro inicio da linha
+ctrl + r = buscar no
+ctrl + g = para cancelar
+
+whoaim = retorna o user
+pwd = onde você ta (print working director)
+
+/bin = arquivos essenciais durante a recupeação de panes (bin é a abreviação de binário).
+/boot = onde fica o kernel linux e os arquivos necessários para inicialização 
+/dev = arquivos de ligações com dispositivos de hardware device
+/etc = arquivos de configuração do OS e rede
+/home = arquivos, documentos e config dos usuários (cada usuário possui um subdiretório próprio dentro do home)
+/lib = módulos do kernel, drivers de dispositivos e bibliotecas
+/lost+found = files encontrados que tenham perdido o vínculo com os inodes. Eles buscam a recuperação de arquivos após falahas de energia
+/media = ponto de montagem automática de mídias removíveis (disquete, cd-rom, dvd, pendrive, etc)
+/opt = 
+/proc = diretório virtual, filesystem virtual. gerado constantemente pelo kernel (ex.: ocupação de memória);
+/opt = fornece um local opcional para aplicar
+/root
+/sbin = binários importantes do sistema
+/srv = abrigar infos dos servidores
+/sys = diretório destinado a montagem sysfs
+/tmp = arquivos temporários
+/usr = (unix shared resources) maior parte dos arquivos que possam ser compartilhados.
+/var = arquivos variáveis tal como logs de banco de dados
+
+cd = change directory
+cd /bin (ex)
+
+cd .. (subir)
+
+cd ../etc ( sobre um diretório e entra em etc )
+
+su root = comando para trocar para root
+
+OBS TROCAR O APT POR DNF NO FEDORA
+
+su -c "dnf install sl" root = instalar como root no usuário normal
+
+emacs -nw -Q
+
+ctrl + G = cancelar
+
+ctrl x ctrl f = abrir um arquivo file
+ctrl x ctrl s = salvar arquivo
+ctrl x ctrl w = salvar como
+ctrl x ctrl c = fechar
