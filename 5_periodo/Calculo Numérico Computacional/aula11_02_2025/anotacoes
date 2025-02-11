@@ -1,0 +1,135 @@
+py .\aula01.py -> executa o arquivo
+
+cls -> clear do terminal
+
+operações básicas:
+>>> 1+4  
+5
+>>> 2-4 
+-2
+>>> 4/2 
+2.0
+>>> 1/2 
+0.5
+>>> 1//2 
+0
+>>> 1%2 
+1
+
+_ -> ultimo resultado em memória usado para outra operação
+ex.:
+>>> 12 * 3
+36
+>>> _ / 4
+9.0
+
+>>> 3 > 2
+True
+
+>>> x = 5
+>>> 1 < x < 10  ----> A maioria das linguagens não fazem isso (Ex.: C e C++)
+True
+
+Variáveis: não precisão da declaração de tipo
+>>> bolinhas = 101
+>>> y = x * bolinhas
+>>> print(y)
+505
+
+>>> x == y
+False
+
+primeiro código:
+
+```
+if __name__ == '__main__':
+    print('Hello, world!')
+```
+
+Funções:
+
+```
+def soma(a, b):
+    return a + b
+
+if __name__ == '__main__':
+    sum = soma(3, 6)
+    print(sum)
+```
+
+```
+def operacoes(a, b):
+    return a + b, a*b
+
+if __name__ == '__main__':
+    operar = operacoes(3, 4)
+    print(operar)
+```
+
+
+Volume esfera:
+
+```
+def volumeEsfera(r):
+    pi = 3.1415
+    return (4*pi*(r**3))/3
+
+if __name__ == '__main__':
+    esfera = volumeEsfera(2)
+    print(esfera)
+```
+
+usando bibliotecas:
+
+```
+from math import pi
+
+def volumeEsfera(r):
+    return (4/3) * pi * (r**3)
+
+if __name__ == '__main__':
+    esfera = volumeEsfera(2)
+    print(esfera)
+```
+
+Valores prévios:
+```
+def polinomio(a, b, c = 1):
+    return a**2 + b - c
+
+if __name__ == '__main__':
+    pol = polinomio(2, -1)
+    print(pol)
+```
+
+OBS.: o valor prévio sempre deve estar no final, não pode estar na 1°.
+
+
+>>> type(3)
+<class 'int'>
+>>> type(3.14)
+<class 'float'>
+
+Complexos:
+
+>>> x = complex(5, 7)
+>>> print(x)
+(5+7j)
+>>> print(x.real)
+5.0
+>>> print(x.imag)
+7.0
+
+Strings:
+>>> x = 'Hello world'
+>>> print(x[4])  ----> começa no 0
+o
+>>> print(x[-1])  ----> n° negativos começam de trás para frente
+d
+
+>>> str1 = 'Hello'
+>>> str2 = 'word'
+>>> saida = str1 + ' ' + str2
+>>> print(saida)
+Hello word
+
