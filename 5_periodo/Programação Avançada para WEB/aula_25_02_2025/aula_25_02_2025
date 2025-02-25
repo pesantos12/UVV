@@ -1,0 +1,28 @@
+# criação da pasta bloguvv
+
+$ py -m venv venv 
+# para baixar o python na pasta
+
+$ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+# Para remover os problemas de segurança
+
+$ venv\Scripts\activate
+# para entrar no ambiente virtual (usando o python da pasta)
+
+(venv) $ pip install flask
+(venv) $ pip install ipython
+
+# Estrutura do projeto até agora:
+bloguvv/
+	venv/
+	app/
+		__init__.py
+		routes.py
+	bloguvv.py
+
+
+(venv) $ set FLASK_APP=bloguvv.py
+(venv) $ flask run
+
+(venv) $ $ENV:FLASK_DEBUG=1
+Serve para debugar o código sempre que você salvar
