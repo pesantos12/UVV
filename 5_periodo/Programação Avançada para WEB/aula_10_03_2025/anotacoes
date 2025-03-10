@@ -1,0 +1,13 @@
+(venv) $ pip install flask-wtf
+
+Nova distribuição:
+bloguvv/
+	venv/
+	app/
+		__init__.py
+		routes.py
+		templates/
+			base.html
+			index.html
+		config.py
+	config.py
