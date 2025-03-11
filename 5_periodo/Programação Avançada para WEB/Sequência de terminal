@@ -1,0 +1,9 @@
+Sequência de terminal
+py -m venv venv
+$ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+(venv) $ pip install flask
+(venv) $ pip install ipython
+(venv) $ set FLASK_APP=bloguvv.py
+(venv) $ set FLASK_DEBUG=1
+(venv) $ flask run
+(venv) $ pip install flask-wtf

@@ -1,0 +1,31 @@
+<!-- app/templates/base.html -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+            <title>{{ title }} - Blog UVV</title>
+            {% else %}
+            <title>Bem vindo ao Blog UVV!</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+                Blog UVV:
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </body>
+</html>
