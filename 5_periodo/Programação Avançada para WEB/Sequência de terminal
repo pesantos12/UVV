@@ -1,9 +1,20 @@
 Sequência de terminal
 py -m venv venv
 $ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+(venv) $ python.exe -m pip install --upgrade pip
 (venv) $ pip install flask
 (venv) $ pip install ipython
 (venv) $ set FLASK_APP=bloguvv.py
 (venv) $ set FLASK_DEBUG=1
 (venv) $ flask run
 (venv) $ pip install flask-wtf
+(venv) $ pip install flask-sqlalchemy
+(venv) $ pip install flask-migrate
+(venv) $ flask db init
+(venv) $ python -m IPython
+(venv) $ flask db migrate -m "users table"
+(venv) $ flask db upgrade
+(venv) $ flask db migrate -m "posts table"
+(venv) $ flask db upgrade
+(venv) $ flask shell
+(venv) $ pip install flask-login
