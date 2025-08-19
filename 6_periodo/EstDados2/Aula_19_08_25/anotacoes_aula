@@ -1,0 +1,6 @@
+Foi criado uma pasta UVV na pasta DevC
+
+python.exe -m pip install --upgrade pip
+py -m venv venv
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 
+.\venv\Scripts\activate
